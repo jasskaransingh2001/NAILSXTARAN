@@ -28,7 +28,7 @@ export default async function ProductPage({
 
   return (
     <>
-      <section className="container-px grid gap-10 py-12 lg:grid-cols-[0.95fr_1fr]">
+      <section className="container-px grid gap-8 py-10 md:gap-10 md:py-12 lg:grid-cols-[0.95fr_1fr]">
         <div className="product-media overflow-hidden rounded-[8px]">
           <img
             src={product.image}
@@ -36,9 +36,9 @@ export default async function ProductPage({
             className="aspect-[4/5] h-full w-full object-cover mix-blend-multiply"
           />
         </div>
-        <div className="lg:py-6">
+        <div className="min-w-0 lg:py-6">
           <Badge>{product.collection}</Badge>
-          <h1 className="mt-5 text-5xl font-semibold leading-none md:text-7xl">
+          <h1 className="mt-5 text-4xl font-semibold leading-none sm:text-5xl md:text-7xl">
             {product.name}
           </h1>
           <div className="mt-5 flex flex-wrap items-center gap-4">
@@ -64,12 +64,17 @@ export default async function ProductPage({
               </span>
             ) : null}
           </div>
-          <div className="mt-7 flex gap-3">
-            <Button size="lg">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <Button size="lg" className="w-full sm:w-auto">
               <ShoppingBag className="h-5 w-5" />
               Add to cart
             </Button>
-            <Button variant="outline" size="lg" aria-label="Add to wishlist">
+            <Button
+              variant="outline"
+              size="lg"
+              aria-label="Add to wishlist"
+              className="w-full sm:w-auto"
+            >
               <Heart className="h-5 w-5" />
               Wishlist
             </Button>
@@ -122,9 +127,11 @@ export default async function ProductPage({
           </Accordion.Root>
         </div>
       </section>
-      <section className="container-px bg-[#fff7ef] py-16">
+      <section className="container-px bg-[#fff7ef] py-12 md:py-16">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="text-4xl font-semibold md:text-5xl">Complete the look</h2>
+          <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
+            Complete the look
+          </h2>
           <Link href="/shop" className="text-sm font-semibold text-[#9b6b2e]">
             Shop all
           </Link>

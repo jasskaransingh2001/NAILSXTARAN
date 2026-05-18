@@ -19,12 +19,12 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#eadfd7] bg-[#fffdfb]/90 backdrop-blur-xl">
-      <div className="container-px flex h-18 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-full border border-[#d5b66c] bg-[#171211] font-display text-xl text-[#f6df9e]">
+      <div className="container-px flex h-16 items-center justify-between gap-3 md:h-18 md:gap-4">
+        <Link href="/" className="flex min-w-0 items-center gap-2 md:gap-3">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#d5b66c] bg-[#171211] font-display text-lg text-[#f6df9e] md:h-10 md:w-10 md:text-xl">
             N
           </span>
-          <span className="font-display text-2xl font-semibold tracking-wide">
+          <span className="truncate font-display text-xl font-semibold tracking-wide min-[400px]:text-2xl">
             NAILSXTARAN
           </span>
         </Link>
@@ -64,7 +64,7 @@ export function Navbar() {
         </div>
         <button
           aria-label="Open menu"
-          className="grid h-10 w-10 place-items-center rounded-full border border-[#eadfd7] lg:hidden"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#eadfd7] lg:hidden"
           onClick={() => setOpen((value) => !value)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -87,7 +87,7 @@ export function Navbar() {
               {label}
             </Link>
           ))}
-          <div className="grid grid-cols-3 gap-2 pt-3">
+          <div className="grid grid-cols-1 gap-2 pt-3 min-[430px]:grid-cols-3">
             <Button asChild variant="outline">
               <Link href="/wishlist">Wishlist</Link>
             </Button>

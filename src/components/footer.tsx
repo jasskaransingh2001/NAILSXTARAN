@@ -51,13 +51,13 @@ export function Footer() {
           <p className="mt-4 text-sm leading-7 text-[#d8ccc4]">
             Monthly drops, course openings, and private client offers.
           </p>
-          <form className="mt-5 flex gap-2">
+          <form className="mt-5 flex flex-col gap-2 sm:flex-row">
             <Input
               aria-label="Email address"
               placeholder="Email address"
               className="border-white/15 bg-white/10 text-white placeholder:text-[#b8aaa2]"
             />
-            <Button type="submit" variant="gold">
+            <Button type="submit" variant="gold" className="w-full sm:w-auto">
               Join
             </Button>
           </form>

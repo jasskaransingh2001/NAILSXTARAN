@@ -17,7 +17,7 @@ export function MotionSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.65, ease: "easeOut" }}
-      className={cn("container-px py-16 md:py-24", className)}
+      className={cn("container-px py-12 md:py-24", className)}
     >
       {children}
     </motion.section>

@@ -8,14 +8,14 @@ export default function AboutPage() {
         title="A softer brand system with sharper commerce"
         copy="This concept repositions a nail beauty storefront as an elegant destination for product discovery, education, and client trust."
       />
-      <section className="container-px grid gap-8 py-14 lg:grid-cols-2">
+      <section className="container-px grid gap-8 py-12 md:py-14 lg:grid-cols-2">
         <img
           src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=90"
           alt="Luxury beauty studio"
-          className="h-full min-h-[420px] rounded-[8px] object-cover"
+          className="h-full min-h-[320px] rounded-[8px] object-cover md:min-h-[420px]"
         />
         <div className="self-center">
-          <h2 className="text-5xl font-semibold leading-tight">
+          <h2 className="text-4xl font-semibold leading-tight sm:text-5xl">
             Designed for premium perception and faster decisions.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#665b55]">

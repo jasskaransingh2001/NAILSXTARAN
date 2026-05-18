@@ -50,8 +50,8 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 line-clamp-2 text-sm leading-6 text-[#665b55]">
           {product.description}
         </p>
-        <div className="mt-4 flex items-center justify-between gap-3">
-          <div className="flex items-baseline gap-2">
+        <div className="mt-4 flex flex-col gap-3 min-[430px]:flex-row min-[430px]:items-center min-[430px]:justify-between">
+          <div className="flex min-w-0 items-baseline gap-2">
             <span className="font-semibold">{formatPrice(product.price)}</span>
             {product.compareAt ? (
               <span className="text-sm text-[#a79890] line-through">
@@ -59,7 +59,7 @@ export function ProductCard({ product }: { product: Product }) {
               </span>
             ) : null}
           </div>
-          <Button size="sm" variant="outline">
+          <Button size="sm" variant="outline" className="w-full min-[430px]:w-auto">
             <ShoppingBag className="h-4 w-4" />
             Quick add
           </Button>

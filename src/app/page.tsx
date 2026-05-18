@@ -13,34 +13,34 @@ export default function Home() {
 
   return (
     <>
-      <section className="container-px relative overflow-hidden bg-[#fff7ef] py-10 md:py-16">
+      <section className="container-px relative overflow-hidden bg-[#fff7ef] py-8 md:py-16">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <div className="max-w-3xl">
+          <div className="min-w-0 max-w-3xl">
             <Badge>Luxury nail artistry, redesigned</Badge>
-            <h1 className="mt-6 text-6xl font-semibold leading-[0.9] text-[#171211] md:text-8xl">
+            <h1 className="mt-5 max-w-full text-[3.1rem] font-semibold leading-[0.9] text-[#171211] min-[400px]:text-[3.55rem] sm:text-6xl md:mt-6 md:text-8xl">
               NAILSXTARAN
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#665b55]">
+            <p className="mt-5 max-w-xl text-base leading-7 text-[#665b55] md:mt-6 md:text-lg md:leading-8">
               A cleaner, faster, conversion-led beauty storefront for premium
               press-ons, salon gels, artist tools, and pro training.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link href="/shop">
                   Shop the edit
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
                 <Link href="/training-courses">Explore training</Link>
               </Button>
             </div>
-            <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
+            <div className="mt-7 grid max-w-xl grid-cols-1 gap-3 min-[430px]:grid-cols-3 md:mt-9">
               {["4.9 average rating", "2-day dispatch", "Pro education"].map(
                 (item) => (
                   <div
                     key={item}
-                    className="rounded-[8px] border border-[#eadfd7] bg-white/70 p-3 text-sm font-semibold"
+                    className="min-w-0 rounded-[8px] border border-[#eadfd7] bg-white/70 p-3 text-sm font-semibold"
                   >
                     <Check className="mb-2 h-4 w-4 text-[#b9914f]" />
                     {item}
@@ -49,15 +49,15 @@ export default function Home() {
               )}
             </div>
           </div>
-          <div className="relative min-h-[520px] overflow-hidden rounded-[8px] bg-[#171211]">
+          <div className="relative min-h-[360px] overflow-hidden rounded-[8px] bg-[#171211] md:min-h-[520px]">
             <img
               src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=90"
               alt="Luxury manicure with soft blush polish"
               className="absolute inset-0 h-full w-full object-cover opacity-85"
             />
-            <div className="absolute inset-x-5 bottom-5 rounded-[8px] border border-white/20 bg-white/90 p-5 backdrop-blur">
-              <div className="flex items-center justify-between gap-4">
-                <div>
+            <div className="absolute inset-x-3 bottom-3 rounded-[8px] border border-white/20 bg-white/90 p-4 backdrop-blur md:inset-x-5 md:bottom-5 md:p-5">
+              <div className="flex flex-col gap-4 min-[430px]:flex-row min-[430px]:items-center min-[430px]:justify-between">
+                <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9b6b2e]">
                     New drop
                   </p>
@@ -65,7 +65,7 @@ export default function Home() {
                     Bridal Atelier Sets
                   </h2>
                 </div>
-                <Button asChild variant="gold">
+                <Button asChild variant="gold" className="w-full min-[430px]:w-auto">
                   <Link href="/collections">View</Link>
                 </Button>
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
             <Link
               href={collection.href}
               key={collection.name}
-              className="group relative min-h-[430px] overflow-hidden rounded-[8px] bg-[#171211]"
+              className="group relative min-h-[340px] overflow-hidden rounded-[8px] bg-[#171211] md:min-h-[430px]"
             >
               <img
                 src={collection.image}
@@ -120,11 +120,11 @@ export default function Home() {
 
       <MotionSection>
         <div className="grid overflow-hidden rounded-[8px] border border-[#eadfd7] bg-[#171211] text-white lg:grid-cols-2">
-          <div className="p-8 md:p-12">
+          <div className="p-5 sm:p-8 md:p-12">
             <Badge className="border-[#f6df9e]/40 bg-white/10 text-[#f6df9e]">
               Pro training
             </Badge>
-            <h2 className="mt-5 text-5xl font-semibold leading-tight md:text-7xl">
+            <h2 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl md:text-7xl">
               Turn technique into booked-out services.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[#d8ccc4]">
@@ -144,14 +144,14 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <Button asChild className="mt-8" variant="gold" size="lg">
+            <Button asChild className="mt-8 w-full sm:w-auto" variant="gold" size="lg">
               <Link href="/training-courses">View courses</Link>
             </Button>
           </div>
           <img
             src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=90"
             alt="Premium nail training salon"
-            className="h-full min-h-[420px] w-full object-cover"
+            className="h-full min-h-[320px] w-full object-cover md:min-h-[420px]"
           />
         </div>
       </MotionSection>
@@ -194,15 +194,15 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      <section className="container-px pb-20">
-        <div className="rounded-[8px] border border-[#eadfd7] bg-white p-8 text-center shadow-sm md:p-12">
+      <section className="container-px pb-14 md:pb-20">
+        <div className="rounded-[8px] border border-[#eadfd7] bg-white p-5 text-center shadow-sm sm:p-8 md:p-12">
           <Badge>Private list</Badge>
-          <h2 className="mx-auto mt-4 max-w-2xl text-4xl font-semibold md:text-6xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold sm:text-4xl md:text-6xl">
             Early access to drops, training seats, and salon offers.
           </h2>
           <form className="mx-auto mt-7 flex max-w-xl flex-col gap-3 sm:flex-row">
             <Input placeholder="Email address" aria-label="Email address" />
-            <Button type="submit" size="lg">
+            <Button type="submit" size="lg" className="w-full sm:w-auto">
               Sign up
             </Button>
           </form>

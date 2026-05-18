@@ -8,7 +8,11 @@ import { Input } from "@/components/ui/input";
 
 const categories = ["All", "Press Ons", "Gel Polish", "Tools", "Care"];
 
-export function ProductGrid({ initialProducts = products }: { initialProducts?: Product[] }) {
+export function ProductGrid({
+  initialProducts = products,
+}: {
+  initialProducts?: Product[];
+}) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("featured");
@@ -22,16 +26,18 @@ export function ProductGrid({ initialProducts = products }: { initialProducts?: 
           .includes(query.toLowerCase()),
       );
 
-    if (sort === "price-low") return [...next].sort((a, b) => a.price - b.price);
-    if (sort === "price-high") return [...next].sort((a, b) => b.price - a.price);
+    if (sort === "price-low")
+      return [...next].sort((a, b) => a.price - b.price);
+    if (sort === "price-high")
+      return [...next].sort((a, b) => b.price - a.price);
     if (sort === "rating") return [...next].sort((a, b) => b.rating - a.rating);
     return next;
   }, [category, initialProducts, query, sort]);
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="mb-8 grid gap-3 rounded-[8px] border border-[#eadfd7] bg-white p-3 shadow-sm lg:grid-cols-[1fr_auto_auto]">
-        <label className="relative block">
+        <label className="relative block min-w-0">
           <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9c8d85]" />
           <Input
             value={query}
@@ -40,12 +46,12 @@ export function ProductGrid({ initialProducts = products }: { initialProducts?: 
             className="pl-10"
           />
         </label>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex min-w-0 flex-wrap gap-2">
           {categories.map((item) => (
             <button
               key={item}
               onClick={() => setCategory(item)}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`min-w-0 rounded-full px-4 py-2 text-sm font-semibold transition ${
                 category === item
                   ? "bg-[#171211] text-white"
                   : "bg-[#fff7ef] text-[#5f514b] hover:bg-[#f6dfe4]"
@@ -55,7 +61,7 @@ export function ProductGrid({ initialProducts = products }: { initialProducts?: 
             </button>
           ))}
         </div>
-        <label className="relative">
+        <label className="relative min-w-0">
           <SlidersHorizontal className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9c8d85]" />
           <select
             value={sort}
