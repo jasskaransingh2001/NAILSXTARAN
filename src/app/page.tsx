@@ -17,7 +17,7 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div className="min-w-0 max-w-3xl">
             <Badge>Luxury nail artistry, redesigned</Badge>
-            <h1 className="mt-5 max-w-full text-[2.975rem] font-semibold leading-[0.9] text-[#171211] min-[400px]:text-[3.425rem] sm:text-[3.875rem] md:mt-6 md:text-[5.875rem]">
+            <h1 className="mt-5 max-w-full text-[2.975rem] font-semibold leading-[0.9] text-[2.65rem] min-[400px]:text-[3rem] sm:text-[3.5rem] md:text-[5.5rem]">
               NAILSXTARAN
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-[#665b55] md:mt-6 md:text-lg md:leading-8">
